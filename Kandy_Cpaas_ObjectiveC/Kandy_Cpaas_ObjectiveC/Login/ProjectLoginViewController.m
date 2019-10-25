@@ -1,50 +1,48 @@
 //
-//  ViewController.m
-//  Test_IOS_Project
+//  ProjectLoginViewController.m
+//  Kandy_Cpaas_ObjectiveC
 //
-//  Created by Viviksha on 02/05/19.
-//  Copyright © 2019 Ribbon. All rights reserved.
+//  Created by Kunal Nagpal on 10/17/19.
+//  Copyright © 2019 hcl. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "SMS_Controller.h"
+#import "ProjectLoginViewController.h"
 #import "Call_Controller.h"
 
-#define grantType @"password"
-#define scopeId @"openid"
+#define grantType @"client_credentials"
+#define scopeId @"openid regular_call"
 #define serverUrl @"https://oauth-cpaas.att.com/cpaas/auth/v1/token"
-#define myAppDelegate (AppDelegate *)[[UIApplication sharedApplication] delegate]
-
-@interface LoginViewController ()
+@interface ProjectLoginViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation ProjectLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _clienId.text = @"PUB-nesonukuv.34mv";
-    _username.text = @"nesonukuv@planet-travel.club";
-    _password.text = @"Test@123";
-    // Do any additional setup after loading the view, typically from a nib.
-    [self setConfiguration];
+    // Do any additional setup after loading the view.
+    _privateprojectkey_Field.text = @"PRIV-nesonukuv.34mv.nesoproject1";
+    _baseUrl_Field.text = @"oauth-cpaas.att.com";
+    _privateprojectsecret_Field.text =  @"8fe371a7-8158-4800-bb98-ca3ed7291816";
+    [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"Client Credentials"];
+    [self changeViewLayout];
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tabBarController.tabBar setHidden: NO];
 }
 
 - (IBAction)login {
     [self getToken];
 }
 
-//-(void) getToken {
-//    self.activityIndicatorView.hidden = false;
-//    [self.activityIndicatorView startAnimating];
-//    [self sendingAnHTTPPOSTRequestOniOSWithUserEmailId:@"pankhuri_15@next-mail.info" withPassword:@"Test@123" clientId:@"PUB-hcl.z9ht" grant_type:@"password" scope:@"openid"];
-//}
-
 -(void) getToken {
-    if(self.password.text.length > 0 && self.password.text.length > 0 && self.clienId.text.length > 0) {
-        self.activityIndicatorView.hidden = false;
-        [self.activityIndicatorView startAnimating];
-        [self sendingAnHTTPPOSTRequestOniOSWithUserEmailId:self.username.text withPassword:self.password.text clientId:self.clienId.text grant_type:grantType scope:scopeId];
+    if(self.privateprojectkey_Field.text.length > 0 && self.privateprojectsecret_Field.text.length > 0  && self.baseUrl_Field.text.length > 0) {
+       // self.activityIndicatorView.hidden = false;
+       // [self.activityIndicatorView startAnimating];
+        [self sendingAnHTTPPOSTRequestOniOSWithClientProjectKey:self.privateprojectkey_Field.text andClientProjectSecret:self.privateprojectsecret_Field.text grant_type:grantType scope:scopeId];
     } else {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Please fill all the values." preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -56,8 +54,22 @@
     }
     
 }
+-(void) changeViewLayout {
+    
+    _privateprojectkey_View.layer.cornerRadius = 4.0;
+    _privateprojectkey_View.layer.borderColor = UIColor.grayColor.CGColor;
+    _privateprojectkey_View.layer.borderWidth = 0.8;
+    
+    _privateprojectsecret_View.layer.cornerRadius = 4.0;
+    _privateprojectsecret_View.layer.borderColor = UIColor.grayColor.CGColor;
+    _privateprojectsecret_View.layer.borderWidth = 0.8;
+    
+    _baseUrl_View.layer.cornerRadius = 4.0;
+    _baseUrl_View.layer.borderColor = UIColor.grayColor.CGColor;
+    _baseUrl_View.layer.borderWidth = 0.8;
+}
 
--(void)sendingAnHTTPPOSTRequestOniOSWithUserEmailId: (NSString *)emailId withPassword: (NSString *)password clientId:(NSString *)clientId grant_type: (NSString *)grant_type scope:(NSString *)scope{
+-(void)sendingAnHTTPPOSTRequestOniOSWithClientProjectKey: (NSString *)projectKey  andClientProjectSecret:(NSString *)projectSecret grant_type: (NSString *)grant_type scope:(NSString *)scope{
     //Init the NSURLSession with a configuration
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
@@ -67,7 +79,7 @@
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
     
     //Create POST Params and add it to HTTPBody
-    NSString *params = [NSString stringWithFormat:@"username=%@&password=%@&client_id=%@&grant_type=%@&scope=%@",emailId,password,clientId,grant_type,scope];
+    NSString *params = [NSString stringWithFormat:@"client_id=%@&client_secret=%@&grant_type=%@&scope=%@",projectKey,projectSecret,grant_type,scope];
     [urlRequest setHTTPMethod:@"POST"];
     [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
     [urlRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -80,20 +92,12 @@
         self.idToken = [responseDict objectForKey:@"id_token"];
         self.refreshToken = [responseDict objectForKey:@"refresh_token"];
         if(self.accessToken) {
-            self.accessTokenTextView.text = self.accessToken;
+            // self.accessTokenTextView.text = self.accessToken;
             [self getChannelInfo];
         }
     }];
     [dataTask resume];
 }
-
--(void) setConfiguration {
-    CPConfig *configuration = [CPConfig sharedInstance];
-    configuration.restServerUrl = @"oauth-cpaas.att.com";
-    configuration.useSecureConnection = YES;
-    self.activityIndicatorView.hidden = true;
-}
-
 -(void) getChannelInfo {
     NSArray* services= @[[CPServiceInfo buildWithType:ServiceTypeSms push:YES],[CPServiceInfo buildWithType:ServiceTypeChat push:true],[CPServiceInfo buildWithType:ServiceTypeCall push:true],[CPServiceInfo buildWithType:ServiceTypeAddressbook push:true],[CPServiceInfo buildWithType:ServiceTypePresence push:true]];
     self.CPaaS = [[CPaaS alloc] initWithServices: services];
@@ -105,21 +109,31 @@
             NSLog(@"Channel info %@",channelInfo);
             self.channelInfo = channelInfo;
             if(channelInfo) {
-                self.channelInfoTextView.text = self.channelInfo;
-                [self.activityIndicatorView stopAnimating];
-                self.activityIndicatorView.hidden = true;
+                // self.channelInfoTextView.text = self.channelInfo;
+               // [self.activityIndicatorView stopAnimating];
+               // self.activityIndicatorView.hidden = true;
+                [self navigateToDashboard];
             }
         }
     }];
 }
 
-- (IBAction)pushToServiceController  {
+- (void)navigateToDashboard  {
     UIStoryboard *storyboard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     Call_Controller *callController = [storyboard instantiateViewControllerWithIdentifier:@"call_controller"];
     callController.cpaas = self.CPaaS;
     [self.navigationController pushViewController: callController animated:YES];
+    [self.tabBarController.tabBar setHidden: YES];
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
 @end
-
-

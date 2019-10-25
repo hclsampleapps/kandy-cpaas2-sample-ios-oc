@@ -7,15 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
+{
+    UIWindow *window;
+    UITabBarController *tabBarController;
+    
+}
+
 
 @end
 
 @implementation AppDelegate
-
+@synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
+    //window = [[UIWindow alloc]initWithFrame: UIScreen.mainScreen.bounds];
+    //[self addTabBarController];
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
@@ -47,5 +58,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)addTabBarController {
+    UITabBarItem *tabItem = [[UITabBarItem alloc] initWithTitle:@"User" image:nil tag:1];    LoginViewController *loginController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    UINavigationController *loginControllerNav = [[UINavigationController alloc]initWithRootViewController:loginController];
+    
+    loginControllerNav.tabBarItem = tabItem;
+    
+    tabBarController.viewControllers = [[NSArray alloc] initWithObjects:loginControllerNav,  nil];
+    
+    window.rootViewController = tabBarController;
+    
+
+}
 
 @end

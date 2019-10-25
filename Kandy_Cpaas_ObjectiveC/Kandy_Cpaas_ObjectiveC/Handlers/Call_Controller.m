@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"Dashboard"];
     [self initServices];
     // Do any additional setup after loading the view.
 }

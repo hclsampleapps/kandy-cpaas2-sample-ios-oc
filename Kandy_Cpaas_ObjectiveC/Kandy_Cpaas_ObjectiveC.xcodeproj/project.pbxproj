@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06743C982362BDFB00779D46 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06743C972362BDFB00779D46 /* DashboardViewController.m */; };
+		06B5F907235741CC0027199E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B5F906235741CC0027199E /* BaseViewController.m */; };
+		06D897DC2358B17200AFD9F8 /* ProjectLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D897DB2358B17200AFD9F8 /* ProjectLoginViewController.m */; };
 		18199A972343EF2D001161B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18199A962343EF2D001161B1 /* AppDelegate.m */; };
 		18199A9D2343EF2D001161B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18199A9B2343EF2D001161B1 /* Main.storyboard */; };
 		18199A9F2343EF2D001161B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18199A9E2343EF2D001161B1 /* Assets.xcassets */; };
@@ -56,6 +59,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06743C962362BDFB00779D46 /* DashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		06743C972362BDFB00779D46 /* DashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		06B5F905235741CC0027199E /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		06B5F906235741CC0027199E /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		06D897DA2358B17200AFD9F8 /* ProjectLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectLoginViewController.h; sourceTree = "<group>"; };
+		06D897DB2358B17200AFD9F8 /* ProjectLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectLoginViewController.m; sourceTree = "<group>"; };
 		18199A922343EF2D001161B1 /* Kandy_Cpaas_ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kandy_Cpaas_ObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18199A952343EF2D001161B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18199A962343EF2D001161B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +138,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B5F904235741840027199E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				06B5F905235741CC0027199E /* BaseViewController.h */,
+				06B5F906235741CC0027199E /* BaseViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		06D897D92358AC5700AFD9F8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				06743C962362BDFB00779D46 /* DashboardViewController.h */,
+				06743C972362BDFB00779D46 /* DashboardViewController.m */,
+				18199AE72343F367001161B1 /* LoginViewController.h */,
+				18199AE82343F367001161B1 /* LoginViewController.m */,
+				06D897DA2358B17200AFD9F8 /* ProjectLoginViewController.h */,
+				06D897DB2358B17200AFD9F8 /* ProjectLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		18199A892343EF2D001161B1 = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +183,11 @@
 		18199A942343EF2D001161B1 /* Kandy_Cpaas_ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				06B5F904235741840027199E /* Common */,
 				18199AD42343F19F001161B1 /* Handlers */,
 				18199A952343EF2D001161B1 /* AppDelegate.h */,
 				18199A962343EF2D001161B1 /* AppDelegate.m */,
-				18199AE72343F367001161B1 /* LoginViewController.h */,
-				18199AE82343F367001161B1 /* LoginViewController.m */,
+				06D897D92358AC5700AFD9F8 /* Login */,
 				18199A9B2343EF2D001161B1 /* Main.storyboard */,
 				18199A9E2343EF2D001161B1 /* Assets.xcassets */,
 				18199AA02343EF2D001161B1 /* LaunchScreen.storyboard */,
@@ -198,12 +229,12 @@
 				18199AD62343F19F001161B1 /* Address_Controller.h */,
 				18199AD72343F19F001161B1 /* SMS_Controller.h */,
 				18199AD82343F19F001161B1 /* Directory_Search.h */,
+				18199ADE2343F19F001161B1 /* Call_Controller.h */,
 				18199AD92343F19F001161B1 /* Call_Controller.m */,
 				18199ADA2343F19F001161B1 /* Directory_Search.m */,
 				18199ADB2343F19F001161B1 /* SMS_Controller.m */,
 				18199ADC2343F19F001161B1 /* Address_Controller.m */,
 				18199ADD2343F19F001161B1 /* Chat_Controller.h */,
-				18199ADE2343F19F001161B1 /* Call_Controller.h */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -281,12 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18199AE32343F19F001161B1 /* Address_Controller.m in Sources */,
+				06B5F907235741CC0027199E /* BaseViewController.m in Sources */,
 				18199AE02343F19F001161B1 /* Call_Controller.m in Sources */,
 				18199AA52343EF2D001161B1 /* main.m in Sources */,
 				18199AE92343F367001161B1 /* LoginViewController.m in Sources */,
 				18199AE12343F19F001161B1 /* Directory_Search.m in Sources */,
 				18199AE62343F2A2001161B1 /* Empty.swift in Sources */,
+				06743C982362BDFB00779D46 /* DashboardViewController.m in Sources */,
 				18199AE22343F19F001161B1 /* SMS_Controller.m in Sources */,
+				06D897DC2358B17200AFD9F8 /* ProjectLoginViewController.m in Sources */,
 				18199A972343EF2D001161B1 /* AppDelegate.m in Sources */,
 				18199ADF2343F19F001161B1 /* Chat_Controller.m in Sources */,
 			);
