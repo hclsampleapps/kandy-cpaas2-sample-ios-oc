@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		06743C982362BDFB00779D46 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06743C972362BDFB00779D46 /* DashboardViewController.m */; };
+		068D723B236AE8040053B746 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D723A236AE8040053B746 /* DashboardViewController.xib */; };
+		068D723E236AE8A00053B746 /* DashboardTypeCustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D723D236AE8A00053B746 /* DashboardTypeCustomCollectionCell.m */; };
+		068D7240236AE8DC0053B746 /* DashboardTypeCustomCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D723F236AE8DC0053B746 /* DashboardTypeCustomCollectionCell.xib */; };
 		06B5F907235741CC0027199E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B5F906235741CC0027199E /* BaseViewController.m */; };
 		06D897DC2358B17200AFD9F8 /* ProjectLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D897DB2358B17200AFD9F8 /* ProjectLoginViewController.m */; };
 		18199A972343EF2D001161B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18199A962343EF2D001161B1 /* AppDelegate.m */; };
@@ -61,6 +64,10 @@
 /* Begin PBXFileReference section */
 		06743C962362BDFB00779D46 /* DashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		06743C972362BDFB00779D46 /* DashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		068D723A236AE8040053B746 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		068D723C236AE8A00053B746 /* DashboardTypeCustomCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardTypeCustomCollectionCell.h; sourceTree = "<group>"; };
+		068D723D236AE8A00053B746 /* DashboardTypeCustomCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardTypeCustomCollectionCell.m; sourceTree = "<group>"; };
+		068D723F236AE8DC0053B746 /* DashboardTypeCustomCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTypeCustomCollectionCell.xib; sourceTree = "<group>"; };
 		06B5F905235741CC0027199E /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		06B5F906235741CC0027199E /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		06D897DA2358B17200AFD9F8 /* ProjectLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectLoginViewController.h; sourceTree = "<group>"; };
@@ -138,6 +145,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		068D7239236AE7A70053B746 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				06743C962362BDFB00779D46 /* DashboardViewController.h */,
+				06743C972362BDFB00779D46 /* DashboardViewController.m */,
+				068D723A236AE8040053B746 /* DashboardViewController.xib */,
+				068D723C236AE8A00053B746 /* DashboardTypeCustomCollectionCell.h */,
+				068D723D236AE8A00053B746 /* DashboardTypeCustomCollectionCell.m */,
+				068D723F236AE8DC0053B746 /* DashboardTypeCustomCollectionCell.xib */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		06B5F904235741840027199E /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +170,6 @@
 		06D897D92358AC5700AFD9F8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				06743C962362BDFB00779D46 /* DashboardViewController.h */,
-				06743C972362BDFB00779D46 /* DashboardViewController.m */,
 				18199AE72343F367001161B1 /* LoginViewController.h */,
 				18199AE82343F367001161B1 /* LoginViewController.m */,
 				06D897DA2358B17200AFD9F8 /* ProjectLoginViewController.h */,
@@ -187,6 +205,7 @@
 				18199AD42343F19F001161B1 /* Handlers */,
 				18199A952343EF2D001161B1 /* AppDelegate.h */,
 				18199A962343EF2D001161B1 /* AppDelegate.m */,
+				068D7239236AE7A70053B746 /* Dashboard */,
 				06D897D92358AC5700AFD9F8 /* Login */,
 				18199A9B2343EF2D001161B1 /* Main.storyboard */,
 				18199A9E2343EF2D001161B1 /* Assets.xcassets */,
@@ -301,6 +320,8 @@
 				18199AA22343EF2D001161B1 /* LaunchScreen.storyboard in Resources */,
 				18199A9F2343EF2D001161B1 /* Assets.xcassets in Resources */,
 				18199A9D2343EF2D001161B1 /* Main.storyboard in Resources */,
+				068D7240236AE8DC0053B746 /* DashboardTypeCustomCollectionCell.xib in Resources */,
+				068D723B236AE8040053B746 /* DashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068D723E236AE8A00053B746 /* DashboardTypeCustomCollectionCell.m in Sources */,
 				18199AE32343F19F001161B1 /* Address_Controller.m in Sources */,
 				06B5F907235741CC0027199E /* BaseViewController.m in Sources */,
 				18199AE02343F19F001161B1 /* Call_Controller.m in Sources */,

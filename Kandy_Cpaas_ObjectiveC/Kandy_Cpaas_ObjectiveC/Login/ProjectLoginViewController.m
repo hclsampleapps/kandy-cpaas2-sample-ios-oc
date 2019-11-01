@@ -8,6 +8,7 @@
 
 #import "ProjectLoginViewController.h"
 #import "Call_Controller.h"
+#import "DashboardViewController.h"
 
 #define grantType @"client_credentials"
 #define scopeId @"openid regular_call"
@@ -119,12 +120,16 @@
 }
 
 - (void)navigateToDashboard  {
-    UIStoryboard *storyboard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    /*UIStoryboard *storyboard =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     Call_Controller *callController = [storyboard instantiateViewControllerWithIdentifier:@"call_controller"];
     callController.cpaas = self.CPaaS;
     [self.navigationController pushViewController: callController animated:YES];
-    [self.tabBarController.tabBar setHidden: YES];
-}
+    [self.tabBarController.tabBar setHidden: YES];*/
+    
+    DashboardViewController *vc = [[DashboardViewController alloc]initWithNibName:@"DashboardViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:vc];
+    vc.cpaas = self.CPaaS;
+    [[UIApplication sharedApplication] delegate].window.rootViewController = navigationController;}
 
 /*
 #pragma mark - Navigation
