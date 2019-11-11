@@ -135,6 +135,7 @@
 -(void) getChannelInfo {
     NSArray* services= @[[CPServiceInfo buildWithType:ServiceTypeSms push:YES],[CPServiceInfo buildWithType:ServiceTypeChat push:true],[CPServiceInfo buildWithType:ServiceTypeCall push:true],[CPServiceInfo buildWithType:ServiceTypeAddressbook push:true],[CPServiceInfo buildWithType:ServiceTypePresence push:true]];
     self.CPaaS = [[CPaaS alloc] initWithServices: services];
+    [self navigateToDashboard];
     [self.CPaaS.authenticationService connectWithIdToken:self.idToken accessToken:self.accessToken lifetime:3600 completion:^(CPError * _Nullable error, NSString * _Nullable channelInfo) {
         if (error) {
             NSString *errStr = [NSString stringWithFormat:@"%@", error.localizedDescription];

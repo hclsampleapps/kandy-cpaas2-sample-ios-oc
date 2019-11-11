@@ -8,6 +8,7 @@
 
 #import "DashboardViewController.h"
 #import "DashboardTypeCustomCollectionCell.h"
+#import "AddressDirectoryViewController.h"
 
 @interface DashboardViewController () <UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
@@ -81,6 +82,9 @@
 
 -(void)navigateToAddressBook{
     
+    AddressDirectoryViewController *vc = [[AddressDirectoryViewController alloc]initWithNibName:@"AddressDirectoryViewController" bundle:nil];
+    vc.cpaas = self.cpaas;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)navigateToPresence{
