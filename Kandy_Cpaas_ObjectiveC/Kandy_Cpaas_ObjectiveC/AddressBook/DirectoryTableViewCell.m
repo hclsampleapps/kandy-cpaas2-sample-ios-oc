@@ -37,7 +37,7 @@
     
 }
 
--(CGFloat)height{
++(CGFloat)height{
     return 412;
 }
 

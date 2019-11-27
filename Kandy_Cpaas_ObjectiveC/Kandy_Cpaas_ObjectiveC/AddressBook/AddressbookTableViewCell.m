@@ -40,8 +40,6 @@
     return 473;
 }
 
-- (IBAction)btnBuddyTappedWithSender:(UIButton *)sender{
-    
-}
+
 
 @end

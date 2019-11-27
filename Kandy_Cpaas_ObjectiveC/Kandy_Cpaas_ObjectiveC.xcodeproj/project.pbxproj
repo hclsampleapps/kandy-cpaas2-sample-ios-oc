@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0602932E2382B0D4004C15C5 /* AddressBookModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0602932D2382B0D4004C15C5 /* AddressBookModule.m */; };
 		064C01BB23747552004AF74A /* DirectoryBO.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C01BA23747552004AF74A /* DirectoryBO.m */; };
 		064C01BD23767341004AF74A /* DirectoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064C01BC23767341004AF74A /* DirectoryTableViewCell.xib */; };
 		064C01C023767366004AF74A /* DirectoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C01BF23767366004AF74A /* DirectoryTableViewCell.m */; };
@@ -78,6 +79,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0602932C2382B0D4004C15C5 /* AddressBookModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookModule.h; sourceTree = "<group>"; };
+		0602932D2382B0D4004C15C5 /* AddressBookModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookModule.m; sourceTree = "<group>"; };
 		064C01B923747552004AF74A /* DirectoryBO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectoryBO.h; sourceTree = "<group>"; };
 		064C01BA23747552004AF74A /* DirectoryBO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryBO.m; sourceTree = "<group>"; };
 		064C01BC23767341004AF74A /* DirectoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 		18199AD42343F19F001161B1 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				0602932C2382B0D4004C15C5 /* AddressBookModule.h */,
+				0602932D2382B0D4004C15C5 /* AddressBookModule.m */,
 				064CC1DE2379644D00AF954B /* DirectoryModule.h */,
 				064CC1DF2379644D00AF954B /* DirectoryModule.m */,
 				18199AD62343F19F001161B1 /* Address_Controller.h */,
@@ -424,6 +429,7 @@
 				18199AE12343F19F001161B1 /* Directory_Search.m in Sources */,
 				18199AE62343F2A2001161B1 /* Empty.swift in Sources */,
 				06D5AB2623745A0400E9B629 /* DirectoryViewController.m in Sources */,
+				0602932E2382B0D4004C15C5 /* AddressBookModule.m in Sources */,
 				06D5AB1E237447CD00E9B629 /* AddressDirectoryViewController.m in Sources */,
 				064C01BB23747552004AF74A /* DirectoryBO.m in Sources */,
 				06743C982362BDFB00779D46 /* DashboardViewController.m in Sources */,

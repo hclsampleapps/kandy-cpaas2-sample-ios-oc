@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) IBOutlet UIImageView     *imgBuddy;
 
 -(void)displayContentTypewith : (DirectoryBO*)object;
--(CGFloat)height;
++(CGFloat)height;
 @end
 
 NS_ASSUME_NONNULL_END

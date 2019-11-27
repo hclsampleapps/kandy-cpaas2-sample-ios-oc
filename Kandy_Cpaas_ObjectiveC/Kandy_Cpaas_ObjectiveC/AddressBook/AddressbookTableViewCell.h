@@ -24,9 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) IBOutlet UIImageView         *imgBuddy;
 @property (nonatomic, weak) IBOutlet UIButton            *btnBuddy;
 
-- (IBAction)btnBuddyTappedWithSender:(UIButton *)sender;
 
--(void)displayContentTypewith : (DirectoryBO*)object;
+-(void)displayContentTypewith : (AddressbookBO*)object;
 -(CGFloat)height;
 
 @end
