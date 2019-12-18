@@ -9,6 +9,7 @@
 #import "DashboardViewController.h"
 #import "DashboardTypeCustomCollectionCell.h"
 #import "AddressDirectoryViewController.h"
+#import "ChatViewController.h"
 
 @interface DashboardViewController () <UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
@@ -73,7 +74,9 @@
 }
 
 -(void)navigateToChat{
-    
+   ChatViewController *vc = [[ChatViewController alloc]initWithNibName:@"ChatViewController" bundle:nil];
+    vc.cpaas = self.cpaas;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)navigateToVoiceVideo{

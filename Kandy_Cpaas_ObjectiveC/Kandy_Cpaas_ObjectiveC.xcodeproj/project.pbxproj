@@ -30,6 +30,21 @@
 		06D5AB23237459EA00E9B629 /* DirectoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AB22237459EA00E9B629 /* DirectoryViewController.xib */; };
 		06D5AB2623745A0400E9B629 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D5AB2523745A0400E9B629 /* DirectoryViewController.m */; };
 		06D897DC2358B17200AFD9F8 /* ProjectLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D897DB2358B17200AFD9F8 /* ProjectLoginViewController.m */; };
+		06F174C62399FA0F000DDFE2 /* ChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F174C52399FA0F000DDFE2 /* ChatHandler.m */; };
+		06F174CA239A2FE4000DDFE2 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F174C9239A2FE4000DDFE2 /* ChatViewController.m */; };
+		06F174CC239A3016000DDFE2 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F174CB239A3015000DDFE2 /* ChatViewController.xib */; };
+		06F174DC239A3B40000DDFE2 /* Someone_sBubbleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F174D0239A3B3F000DDFE2 /* Someone_sBubbleViewCell.xib */; };
+		06F174DD239A3B40000DDFE2 /* Someone_sBubbleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174D1239A3B40000DDFE2 /* Someone_sBubbleViewCell.swift */; };
+		06F174DE239A3B40000DDFE2 /* LynnBubbleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174D2239A3B40000DDFE2 /* LynnBubbleTableView.swift */; };
+		06F174DF239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174D3239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.swift */; };
+		06F174E0239A3B40000DDFE2 /* LynnBubbleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174D4239A3B40000DDFE2 /* LynnBubbleData.swift */; };
+		06F174E1239A3B40000DDFE2 /* ImageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174D5239A3B40000DDFE2 /* ImageBubbleTableViewCell.swift */; };
+		06F174E2239A3B40000DDFE2 /* MyBubbleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174D6239A3B40000DDFE2 /* MyBubbleViewCell.swift */; };
+		06F174E3239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F174D7239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.xib */; };
+		06F174E4239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F174D8239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.xib */; };
+		06F174E5239A3B40000DDFE2 /* ImageBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F174D9239A3B40000DDFE2 /* ImageBubbleTableViewCell.xib */; };
+		06F174E6239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F174DA239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.swift */; };
+		06F174E7239A3B40000DDFE2 /* MyBubbleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F174DB239A3B40000DDFE2 /* MyBubbleViewCell.xib */; };
 		18199A972343EF2D001161B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18199A962343EF2D001161B1 /* AppDelegate.m */; };
 		18199A9D2343EF2D001161B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18199A9B2343EF2D001161B1 /* Main.storyboard */; };
 		18199A9F2343EF2D001161B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18199A9E2343EF2D001161B1 /* Assets.xcassets */; };
@@ -116,6 +131,24 @@
 		06D5AB2523745A0400E9B629 /* DirectoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
 		06D897DA2358B17200AFD9F8 /* ProjectLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectLoginViewController.h; sourceTree = "<group>"; };
 		06D897DB2358B17200AFD9F8 /* ProjectLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectLoginViewController.m; sourceTree = "<group>"; };
+		06F174C42399FA0F000DDFE2 /* ChatHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatHandler.h; sourceTree = "<group>"; };
+		06F174C52399FA0F000DDFE2 /* ChatHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatHandler.m; sourceTree = "<group>"; };
+		06F174C8239A2FE4000DDFE2 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		06F174C9239A2FE4000DDFE2 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		06F174CB239A3015000DDFE2 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		06F174CD239A36FE000DDFE2 /* Ribbon_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ribbon_Bridging_Header.h; sourceTree = "<group>"; };
+		06F174D0239A3B3F000DDFE2 /* Someone_sBubbleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Someone_sBubbleViewCell.xib; sourceTree = "<group>"; };
+		06F174D1239A3B40000DDFE2 /* Someone_sBubbleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Someone_sBubbleViewCell.swift; sourceTree = "<group>"; };
+		06F174D2239A3B40000DDFE2 /* LynnBubbleTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LynnBubbleTableView.swift; sourceTree = "<group>"; };
+		06F174D3239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBubbleSomeoneViewCell.swift; sourceTree = "<group>"; };
+		06F174D4239A3B40000DDFE2 /* LynnBubbleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LynnBubbleData.swift; sourceTree = "<group>"; };
+		06F174D5239A3B40000DDFE2 /* ImageBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		06F174D6239A3B40000DDFE2 /* MyBubbleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBubbleViewCell.swift; sourceTree = "<group>"; };
+		06F174D7239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LynnBubbleViewHeaderCell.xib; sourceTree = "<group>"; };
+		06F174D8239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBubbleSomeoneViewCell.xib; sourceTree = "<group>"; };
+		06F174D9239A3B40000DDFE2 /* ImageBubbleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		06F174DA239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LynnBubbleViewHeaderCell.swift; sourceTree = "<group>"; };
+		06F174DB239A3B40000DDFE2 /* MyBubbleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBubbleViewCell.xib; sourceTree = "<group>"; };
 		18199A922343EF2D001161B1 /* Kandy_Cpaas_ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kandy_Cpaas_ObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18199A952343EF2D001161B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18199A962343EF2D001161B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -252,6 +285,35 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		06F174C7239A2FAD000DDFE2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				06F174C8239A2FE4000DDFE2 /* ChatViewController.h */,
+				06F174C9239A2FE4000DDFE2 /* ChatViewController.m */,
+				06F174CB239A3015000DDFE2 /* ChatViewController.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		06F174CF239A3B0A000DDFE2 /* LynnBubbleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				06F174D3239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.swift */,
+				06F174D8239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.xib */,
+				06F174D5239A3B40000DDFE2 /* ImageBubbleTableViewCell.swift */,
+				06F174D9239A3B40000DDFE2 /* ImageBubbleTableViewCell.xib */,
+				06F174D4239A3B40000DDFE2 /* LynnBubbleData.swift */,
+				06F174D2239A3B40000DDFE2 /* LynnBubbleTableView.swift */,
+				06F174DA239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.swift */,
+				06F174D7239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.xib */,
+				06F174D6239A3B40000DDFE2 /* MyBubbleViewCell.swift */,
+				06F174DB239A3B40000DDFE2 /* MyBubbleViewCell.xib */,
+				06F174D1239A3B40000DDFE2 /* Someone_sBubbleViewCell.swift */,
+				06F174D0239A3B3F000DDFE2 /* Someone_sBubbleViewCell.xib */,
+			);
+			path = LynnBubbleTableView;
+			sourceTree = "<group>";
+		};
 		18199A892343EF2D001161B1 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +337,9 @@
 		18199A942343EF2D001161B1 /* Kandy_Cpaas_ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				06F174CD239A36FE000DDFE2 /* Ribbon_Bridging_Header.h */,
+				06F174CF239A3B0A000DDFE2 /* LynnBubbleTableView */,
+				06F174C7239A2FAD000DDFE2 /* Chat */,
 				06D5AB172374468300E9B629 /* AddressBook */,
 				06B5F904235741840027199E /* Common */,
 				18199AD42343F19F001161B1 /* Handlers */,
@@ -323,6 +388,8 @@
 				0602932D2382B0D4004C15C5 /* AddressBookModule.m */,
 				064CC1DE2379644D00AF954B /* DirectoryModule.h */,
 				064CC1DF2379644D00AF954B /* DirectoryModule.m */,
+				06F174C42399FA0F000DDFE2 /* ChatHandler.h */,
+				06F174C52399FA0F000DDFE2 /* ChatHandler.m */,
 				18199AD62343F19F001161B1 /* Address_Controller.h */,
 				18199ADC2343F19F001161B1 /* Address_Controller.m */,
 				18199AD72343F19F001161B1 /* SMS_Controller.h */,
@@ -402,12 +469,18 @@
 				18199A9F2343EF2D001161B1 /* Assets.xcassets in Resources */,
 				06D5AB1B2374476D00E9B629 /* AddressDirectoryViewController.xib in Resources */,
 				0699D271237850700058A77C /* AddressbookTableViewCell.xib in Resources */,
+				06F174E3239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.xib in Resources */,
 				06D5AB19237446FE00E9B629 /* AddressbookViewController.xib in Resources */,
+				06F174CC239A3016000DDFE2 /* ChatViewController.xib in Resources */,
 				18199A9D2343EF2D001161B1 /* Main.storyboard in Resources */,
+				06F174DC239A3B40000DDFE2 /* Someone_sBubbleViewCell.xib in Resources */,
+				06F174E5239A3B40000DDFE2 /* ImageBubbleTableViewCell.xib in Resources */,
+				06F174E7239A3B40000DDFE2 /* MyBubbleViewCell.xib in Resources */,
 				064C01BD23767341004AF74A /* DirectoryTableViewCell.xib in Resources */,
 				068D7240236AE8DC0053B746 /* DashboardTypeCustomCollectionCell.xib in Resources */,
 				0699D26F2378505B0058A77C /* AddressListTableViewCell.xib in Resources */,
 				068D723B236AE8040053B746 /* DashboardViewController.xib in Resources */,
+				06F174E4239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				068D723E236AE8A00053B746 /* DashboardTypeCustomCollectionCell.m in Sources */,
+				06F174E0239A3B40000DDFE2 /* LynnBubbleData.swift in Sources */,
 				18199AE32343F19F001161B1 /* Address_Controller.m in Sources */,
 				06B5F907235741CC0027199E /* BaseViewController.m in Sources */,
 				18199AE02343F19F001161B1 /* Call_Controller.m in Sources */,
@@ -427,18 +501,26 @@
 				18199AE92343F367001161B1 /* LoginViewController.m in Sources */,
 				064CC1E02379644D00AF954B /* DirectoryModule.m in Sources */,
 				18199AE12343F19F001161B1 /* Directory_Search.m in Sources */,
+				06F174E6239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.swift in Sources */,
+				06F174DD239A3B40000DDFE2 /* Someone_sBubbleViewCell.swift in Sources */,
+				06F174DF239A3B40000DDFE2 /* ImageBubbleSomeoneViewCell.swift in Sources */,
 				18199AE62343F2A2001161B1 /* Empty.swift in Sources */,
+				06F174DE239A3B40000DDFE2 /* LynnBubbleTableView.swift in Sources */,
 				06D5AB2623745A0400E9B629 /* DirectoryViewController.m in Sources */,
+				06F174E1239A3B40000DDFE2 /* ImageBubbleTableViewCell.swift in Sources */,
 				0602932E2382B0D4004C15C5 /* AddressBookModule.m in Sources */,
 				06D5AB1E237447CD00E9B629 /* AddressDirectoryViewController.m in Sources */,
 				064C01BB23747552004AF74A /* DirectoryBO.m in Sources */,
+				06F174C62399FA0F000DDFE2 /* ChatHandler.m in Sources */,
 				06743C982362BDFB00779D46 /* DashboardViewController.m in Sources */,
+				06F174E2239A3B40000DDFE2 /* MyBubbleViewCell.swift in Sources */,
 				18199AE22343F19F001161B1 /* SMS_Controller.m in Sources */,
 				06D5AB21237459AF00E9B629 /* AddressbookViewController.m in Sources */,
 				06D897DC2358B17200AFD9F8 /* ProjectLoginViewController.m in Sources */,
 				18199A972343EF2D001161B1 /* AppDelegate.m in Sources */,
 				0699D2742378523C0058A77C /* AddressbookTableViewCell.m in Sources */,
 				0699D277237852810058A77C /* AddressListTableViewCell.m in Sources */,
+				06F174CA239A2FE4000DDFE2 /* ChatViewController.m in Sources */,
 				18199ADF2343F19F001161B1 /* Chat_Controller.m in Sources */,
 				0699D26D23784B030058A77C /* AddressListViewController.m in Sources */,
 			);
