@@ -61,8 +61,8 @@
 
 
 - (void)outboundMessageSentWithMessage:(CPOutboundMessage * _Nonnull)message {
-    if ([self.delegate conformsToProtocol:@protocol(ChatDelegate)] && [self.delegate respondsToSelector:@selector(deliveryStatusChanged)] ) {
-        [self.delegate deliveryStatusChanged];
+    if ([self.delegate conformsToProtocol:@protocol(ChatDelegate)] && [self.delegate respondsToSelector:@selector(outboundMessageSent)] ) {
+        [self.delegate outboundMessageSent];
     }
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0602932E2382B0D4004C15C5 /* AddressBookModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0602932D2382B0D4004C15C5 /* AddressBookModule.m */; };
+		0643FA7523C4CCAE0075F55C /* SMSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0643FA7423C4CCAE0075F55C /* SMSViewController.xib */; };
+		0643FA7823C4CCF00075F55C /* SMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0643FA7723C4CCF00075F55C /* SMSViewController.m */; };
 		064C01BB23747552004AF74A /* DirectoryBO.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C01BA23747552004AF74A /* DirectoryBO.m */; };
 		064C01BD23767341004AF74A /* DirectoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064C01BC23767341004AF74A /* DirectoryTableViewCell.xib */; };
 		064C01C023767366004AF74A /* DirectoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C01BF23767366004AF74A /* DirectoryTableViewCell.m */; };
@@ -22,6 +24,7 @@
 		0699D271237850700058A77C /* AddressbookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0699D270237850700058A77C /* AddressbookTableViewCell.xib */; };
 		0699D2742378523C0058A77C /* AddressbookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699D2732378523C0058A77C /* AddressbookTableViewCell.m */; };
 		0699D277237852810058A77C /* AddressListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699D276237852810058A77C /* AddressListTableViewCell.m */; };
+		06AD9C5623C5DEAD00F686A5 /* SMSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AD9C5523C5DEAD00F686A5 /* SMSHandler.m */; };
 		06B5F907235741CC0027199E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B5F906235741CC0027199E /* BaseViewController.m */; };
 		06D5AB19237446FE00E9B629 /* AddressbookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AB18237446FE00E9B629 /* AddressbookViewController.xib */; };
 		06D5AB1B2374476D00E9B629 /* AddressDirectoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D5AB1A2374476D00E9B629 /* AddressDirectoryViewController.xib */; };
@@ -96,6 +99,9 @@
 /* Begin PBXFileReference section */
 		0602932C2382B0D4004C15C5 /* AddressBookModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookModule.h; sourceTree = "<group>"; };
 		0602932D2382B0D4004C15C5 /* AddressBookModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookModule.m; sourceTree = "<group>"; };
+		0643FA7423C4CCAE0075F55C /* SMSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMSViewController.xib; sourceTree = "<group>"; };
+		0643FA7623C4CCF00075F55C /* SMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSViewController.h; sourceTree = "<group>"; };
+		0643FA7723C4CCF00075F55C /* SMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSViewController.m; sourceTree = "<group>"; };
 		064C01B923747552004AF74A /* DirectoryBO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectoryBO.h; sourceTree = "<group>"; };
 		064C01BA23747552004AF74A /* DirectoryBO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryBO.m; sourceTree = "<group>"; };
 		064C01BC23767341004AF74A /* DirectoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 		0699D2732378523C0058A77C /* AddressbookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressbookTableViewCell.m; sourceTree = "<group>"; };
 		0699D275237852810058A77C /* AddressListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressListTableViewCell.h; sourceTree = "<group>"; };
 		0699D276237852810058A77C /* AddressListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressListTableViewCell.m; sourceTree = "<group>"; };
+		06AD9C5423C5DEAD00F686A5 /* SMSHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSHandler.h; sourceTree = "<group>"; };
+		06AD9C5523C5DEAD00F686A5 /* SMSHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSHandler.m; sourceTree = "<group>"; };
 		06B5F905235741CC0027199E /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		06B5F906235741CC0027199E /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		06D5AB18237446FE00E9B629 /* AddressbookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressbookViewController.xib; sourceTree = "<group>"; };
@@ -222,6 +230,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0643FA7323C4CB1C0075F55C /* SMS */ = {
+			isa = PBXGroup;
+			children = (
+				0643FA7623C4CCF00075F55C /* SMSViewController.h */,
+				0643FA7723C4CCF00075F55C /* SMSViewController.m */,
+				0643FA7423C4CCAE0075F55C /* SMSViewController.xib */,
+			);
+			path = SMS;
+			sourceTree = "<group>";
+		};
 		068D7239236AE7A70053B746 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				06F174CD239A36FE000DDFE2 /* Ribbon_Bridging_Header.h */,
+				0643FA7323C4CB1C0075F55C /* SMS */,
 				06F174CF239A3B0A000DDFE2 /* LynnBubbleTableView */,
 				06F174C7239A2FAD000DDFE2 /* Chat */,
 				06D5AB172374468300E9B629 /* AddressBook */,
@@ -390,6 +409,8 @@
 				064CC1DF2379644D00AF954B /* DirectoryModule.m */,
 				06F174C42399FA0F000DDFE2 /* ChatHandler.h */,
 				06F174C52399FA0F000DDFE2 /* ChatHandler.m */,
+				06AD9C5423C5DEAD00F686A5 /* SMSHandler.h */,
+				06AD9C5523C5DEAD00F686A5 /* SMSHandler.m */,
 				18199AD62343F19F001161B1 /* Address_Controller.h */,
 				18199ADC2343F19F001161B1 /* Address_Controller.m */,
 				18199AD72343F19F001161B1 /* SMS_Controller.h */,
@@ -471,6 +492,7 @@
 				0699D271237850700058A77C /* AddressbookTableViewCell.xib in Resources */,
 				06F174E3239A3B40000DDFE2 /* LynnBubbleViewHeaderCell.xib in Resources */,
 				06D5AB19237446FE00E9B629 /* AddressbookViewController.xib in Resources */,
+				0643FA7523C4CCAE0075F55C /* SMSViewController.xib in Resources */,
 				06F174CC239A3016000DDFE2 /* ChatViewController.xib in Resources */,
 				18199A9D2343EF2D001161B1 /* Main.storyboard in Resources */,
 				06F174DC239A3B40000DDFE2 /* Someone_sBubbleViewCell.xib in Resources */,
@@ -515,8 +537,10 @@
 				06743C982362BDFB00779D46 /* DashboardViewController.m in Sources */,
 				06F174E2239A3B40000DDFE2 /* MyBubbleViewCell.swift in Sources */,
 				18199AE22343F19F001161B1 /* SMS_Controller.m in Sources */,
+				06AD9C5623C5DEAD00F686A5 /* SMSHandler.m in Sources */,
 				06D5AB21237459AF00E9B629 /* AddressbookViewController.m in Sources */,
 				06D897DC2358B17200AFD9F8 /* ProjectLoginViewController.m in Sources */,
+				0643FA7823C4CCF00075F55C /* SMSViewController.m in Sources */,
 				18199A972343EF2D001161B1 /* AppDelegate.m in Sources */,
 				0699D2742378523C0058A77C /* AddressbookTableViewCell.m in Sources */,
 				0699D277237852810058A77C /* AddressListTableViewCell.m in Sources */,

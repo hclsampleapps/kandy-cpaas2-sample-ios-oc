@@ -10,7 +10,7 @@
 #import "DashboardTypeCustomCollectionCell.h"
 #import "AddressDirectoryViewController.h"
 #import "ChatViewController.h"
-
+#import "SMSViewController.h"
 @interface DashboardViewController () <UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
     NSArray *mainContents;
@@ -70,6 +70,9 @@
 }
 
 -(void)navigateToSMS{
+    SMSViewController *vc = [[SMSViewController alloc]initWithNibName:@"SMSViewController" bundle:nil];
+    vc.cpaas = self.cpaas;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
