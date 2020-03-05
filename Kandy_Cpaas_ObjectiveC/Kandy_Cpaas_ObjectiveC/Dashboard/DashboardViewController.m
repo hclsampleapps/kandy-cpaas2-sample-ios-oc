@@ -11,6 +11,8 @@
 #import "AddressDirectoryViewController.h"
 #import "ChatViewController.h"
 #import "SMSViewController.h"
+#import "PresenceViewController.h"
+
 @interface DashboardViewController () <UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
     NSArray *mainContents;
@@ -94,6 +96,9 @@
 }
 
 -(void)navigateToPresence{
+    PresenceViewController *vc = [[PresenceViewController alloc]initWithNibName:@"PresenceViewController" bundle:nil];
+    vc.cpaas = self.cpaas;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

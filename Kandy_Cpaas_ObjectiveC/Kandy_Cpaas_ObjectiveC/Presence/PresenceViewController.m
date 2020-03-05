@@ -25,6 +25,8 @@
     [presenceHandler subscribeServices];
     presenceHandler.delegate = self;
     [presenceHandler fetchAllPrentities];
+    [self registerNib];
+    [self setStatus];
     self.status_pickerView.delegate = self;
     self.status_pickerView.dataSource = self;
     
@@ -42,10 +44,10 @@
 
 -(void)setStatus{
     NSString *currentStatus = [NSUserDefaults.standardUserDefaults objectForKey:@"CurrentStatus"];
-    NSString *currentStatusColor = [NSUserDefaults.standardUserDefaults objectForKey:@"CurrentStatusColor"];
+    NSString *currentStatusColor = [NSUserDefaults.standardUserDefaults objectForKey:@"CurrentStatus"];
     if (currentStatus != nil && currentStatusColor != nil) {
         self.status_lbl.text = currentStatus;
-        self.status_lbl.backgroundColor = [self getStatusColor:currentStatusColor];
+        self.status_imgView.backgroundColor = [self getStatusColor:currentStatusColor];
     }
 }
 

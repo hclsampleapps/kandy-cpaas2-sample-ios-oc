@@ -151,6 +151,7 @@
                 [self navigateToDashboard];
                  [self.view setUserInteractionEnabled:YES];            }
         }
+        [self navigateToDashboard];
     }];
     
     
