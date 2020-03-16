@@ -1,0 +1,20 @@
+PODS:
+  - KandyCPaaSMobileSDK (2.3.0):
+    - KandyWebRTC
+  - KandyWebRTC (0.78)
+
+DEPENDENCIES:
+  - KandyCPaaSMobileSDK (= 2.3.0)
+
+SPEC REPOS:
+  trunk:
+    - KandyCPaaSMobileSDK
+    - KandyWebRTC
+
+SPEC CHECKSUMS:
+  KandyCPaaSMobileSDK: 39e3d61ecd5308f0f5491df8b739182903cec2f3
+  KandyWebRTC: 654b0a07c7ce74809cb7e5649c4aa6ae837988d2
+
+PODFILE CHECKSUM: b36e8c22af12bce15ad1902d73773358c10ea1c0
+
+COCOAPODS: 1.8.4
