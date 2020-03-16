@@ -1,5 +1,5 @@
 # kandy-cpaas2-sample-ios (Objective C)
-Sample app of CPaaS2 modules (Call, SMS,Chat,Presence,Address book)
+Sample app of CPaaS2 modules (Call, SMS,Chat,Presence,Address book,Directory)
 
 ## Introduction
 It is a sample app where CPaaS2 APIs are used to make the following modules
@@ -7,6 +7,8 @@ It is a sample app where CPaaS2 APIs are used to make the following modules
 - [x] SMS
 - [x] Chat
 - [x] Presence
+- [x] Address book
+- [x] Directory
 
 ## Installation
 Instructions to install the .ipa on iPhone using Xcode
