@@ -1,10 +1,3 @@
-//
-//  PresenceHandler.m
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 2/7/20.
-//  Copyright © 2020 hcl. All rights reserved.
-//
 
 #import "PresenceHandler.h"
 

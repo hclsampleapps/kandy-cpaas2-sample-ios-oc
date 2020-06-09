@@ -1,10 +1,3 @@
-//
-//  SMSHandler.m
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 1/8/20.
-//  Copyright © 2020 hcl. All rights reserved.
-//
 
 #import "SMSHandler.h"
 

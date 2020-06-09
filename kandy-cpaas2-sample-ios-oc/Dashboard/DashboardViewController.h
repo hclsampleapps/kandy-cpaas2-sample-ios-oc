@@ -1,10 +1,4 @@
-//
-//  DashboardViewController.h
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 10/25/19.
-//  Copyright © 2019 hcl. All rights reserved.
-//
+
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 @import CPaaSSDK;
