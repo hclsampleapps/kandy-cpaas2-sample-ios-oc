@@ -42,6 +42,8 @@
 		184F4BA12418082F003D2EEC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184F4BA02418082F003D2EEC /* libsqlite3.tbd */; };
 		184F4BA32418083C003D2EEC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184F4BA22418083C003D2EEC /* libc++.tbd */; };
 		184F4BA52418084B003D2EEC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184F4BA42418084B003D2EEC /* libicucore.tbd */; };
+		18A532942490099A00C32F8D /* VoiceVideoControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A532922490099A00C32F8D /* VoiceVideoControllerViewController.m */; };
+		18A532952490099A00C32F8D /* VoiceVideoControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A532932490099A00C32F8D /* VoiceVideoControllerViewController.xib */; };
 		18C2B595241839B40087B125 /* CPaaSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1861F9FE2418160B00D459EF /* CPaaSSDK.framework */; };
 		18F6CD1A2419611900B22E27 /* PresenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6CCC32419611800B22E27 /* PresenceViewController.m */; };
 		18F6CD1B2419611900B22E27 /* PresenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F6CCC42419611800B22E27 /* PresenceViewController.xib */; };
@@ -130,6 +132,9 @@
 		184F4BA42418084B003D2EEC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		1861F9FC241815FB00D459EF /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = Pods/KandyWebRTC/WebRTC.framework; sourceTree = "<group>"; };
 		1861F9FE2418160B00D459EF /* CPaaSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPaaSSDK.framework; path = Pods/KandyCPaaSMobileSDK/CPaaSSDK.framework; sourceTree = "<group>"; };
+		18A532912490099A00C32F8D /* VoiceVideoControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceVideoControllerViewController.h; sourceTree = "<group>"; };
+		18A532922490099A00C32F8D /* VoiceVideoControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceVideoControllerViewController.m; sourceTree = "<group>"; };
+		18A532932490099A00C32F8D /* VoiceVideoControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceVideoControllerViewController.xib; sourceTree = "<group>"; };
 		18F6CCC32419611800B22E27 /* PresenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresenceViewController.m; sourceTree = "<group>"; };
 		18F6CCC42419611800B22E27 /* PresenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresenceViewController.xib; sourceTree = "<group>"; };
 		18F6CCC52419611800B22E27 /* GroupCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCollectionCell.xib; sourceTree = "<group>"; };
@@ -275,6 +280,7 @@
 		184F4B622418062C003D2EEC = {
 			isa = PBXGroup;
 			children = (
+				18A532902490094B00C32F8D /* VoiceVideo */,
 				18383920241AC3A400900784 /* AddressBook */,
 				18F6CD5124196B1100B22E27 /* LynnBubbleTableView */,
 				18F6CD032419611900B22E27 /* Chat */,
@@ -315,6 +321,16 @@
 			path = "kandy-cpaas2-sample-ios-oc";
 			sourceTree = "<group>";
 		};
+		18A532902490094B00C32F8D /* VoiceVideo */ = {
+			isa = PBXGroup;
+			children = (
+				18A532912490099A00C32F8D /* VoiceVideoControllerViewController.h */,
+				18A532922490099A00C32F8D /* VoiceVideoControllerViewController.m */,
+				18A532932490099A00C32F8D /* VoiceVideoControllerViewController.xib */,
+			);
+			path = VoiceVideo;
+			sourceTree = "<group>";
+		};
 		18F6CCC22419611800B22E27 /* Presence */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +351,7 @@
 				18F6CCE22419611900B22E27 /* DirectoryModule.h */,
 				18F6CCF02419611900B22E27 /* DirectoryModule.m */,
 				18F6CCE32419611900B22E27 /* Chat_Controller.m */,
+				18F6CCF52419611900B22E27 /* ChatHandler.h */,
 				18F6CCE82419611900B22E27 /* ChatHandler.m */,
 				18F6CCE42419611900B22E27 /* Address_Controller.h */,
 				18F6CCEE2419611900B22E27 /* Address_Controller.m */,
@@ -351,7 +368,6 @@
 				18F6CCEB2419611900B22E27 /* SMSHandler.h */,
 				18F6CCF22419611900B22E27 /* SMSHandler.m */,
 				18F6CCEF2419611900B22E27 /* Chat_Controller.h */,
-				18F6CCF52419611900B22E27 /* ChatHandler.h */,
 			);
 			name = Handlers;
 			path = "kandy-cpaas2-sample-ios-oc/Handlers";
@@ -511,6 +527,7 @@
 				18F6CD4C2419611900B22E27 /* DashboardViewController.xib in Resources */,
 				18383945241AC3A400900784 /* AddressbookViewController.xib in Resources */,
 				183E2DDD241FF42600CACBB2 /* CustomeCellTableViewCell.xib in Resources */,
+				18A532952490099A00C32F8D /* VoiceVideoControllerViewController.xib in Resources */,
 				184F4B782418062D003D2EEC /* Assets.xcassets in Resources */,
 				18F6CD9D2419763E00B22E27 /* Someone_sBubbleViewCell.xib in Resources */,
 				18F6CD462419611900B22E27 /* SMSViewController.xib in Resources */,
@@ -586,6 +603,7 @@
 				18F6CD1D2419611900B22E27 /* GroupCollectionCell.m in Sources */,
 				18F6CD362419611900B22E27 /* SMSHandler.m in Sources */,
 				18F6CD962419763E00B22E27 /* LynnBubbleViewHeaderCell.swift in Sources */,
+				18A532942490099A00C32F8D /* VoiceVideoControllerViewController.m in Sources */,
 				18F6CD442419611900B22E27 /* ChatViewController.m in Sources */,
 				184F4B7E2418062D003D2EEC /* main.m in Sources */,
 				18F6CD952419763E00B22E27 /* MyBubbleViewCell.swift in Sources */,
@@ -753,9 +771,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VP8SJAJ4NU;
+				DEVELOPMENT_TEAM = 9PJ3V7GYJ4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/KandyWebRTC",
@@ -770,8 +789,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hcl.kandy-cpaas2-sample-ios-oc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.genband.hcl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "kandy-cpaas2-sample-ios-oc/kandy-cpaas2-sample-ios-oc-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -785,9 +805,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VP8SJAJ4NU;
+				DEVELOPMENT_TEAM = 9PJ3V7GYJ4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/KandyWebRTC",
@@ -802,8 +823,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hcl.kandy-cpaas2-sample-ios-oc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.genband.hcl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "kandy-cpaas2-sample-ios-oc/kandy-cpaas2-sample-ios-oc-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

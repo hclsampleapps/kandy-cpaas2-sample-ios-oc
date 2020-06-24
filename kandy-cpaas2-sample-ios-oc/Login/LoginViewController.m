@@ -129,6 +129,7 @@
     [iceServers addICEServer:@"stun:turn-ucc-2.genband.com:3478?transport=udp"];
     [configuration setICEServers:iceServers];
     [configuration.logManager setLogLevel:TRACE_WEBRTC];
+    [configuration.logManager setDelegate:self];
     self.activityIndicatorView.hidden = true;
 }
 
@@ -162,6 +163,10 @@
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:vc];
     vc.cpaas = self.CPaaS;
     [[UIApplication sharedApplication] delegate].window.rootViewController = navigationController;
+}
+
+- (void)log:(CPLogLevel)logLevel withLogContext:(nonnull NSString *)logContext withMethodName:(nullable SEL)methodName withMessage:(nonnull NSString *)logMessage {
+    NSLog(@"LogLevel :: %ld - WithMessage %@", (long)logLevel,logMessage);
 }
 
 @end

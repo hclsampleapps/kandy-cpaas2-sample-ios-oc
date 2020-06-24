@@ -4,9 +4,8 @@
 
 @import CPUtilities;
 @import CPaaSSDK;
-@import CPAuthenticationService;
 
-@interface LoginViewController : BaseViewController
+@interface LoginViewController : BaseViewController <CPLoggingDelegate>
 
 @property(strong, nonatomic) NSString *accessToken;
 @property(strong, nonatomic) NSString *idToken;

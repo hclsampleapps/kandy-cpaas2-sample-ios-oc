@@ -5,7 +5,6 @@
 NS_ASSUME_NONNULL_BEGIN
 @import CPUtilities;
 @import CPaaSSDK;
-@import CPAuthenticationService;
 
 @interface ProjectLoginViewController : BaseViewController
 

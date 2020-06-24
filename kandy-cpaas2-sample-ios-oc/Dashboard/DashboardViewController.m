@@ -5,6 +5,7 @@
 #import "ChatViewController.h"
 #import "SMSViewController.h"
 #import "PresenceViewController.h"
+#import "VoiceVideoControllerViewController.h"
 
 @interface DashboardViewController () <UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
@@ -56,8 +57,10 @@
     else if (indexPath.item == 3) {
         [self navigateToPresence];
     }
+//    else if (indexPath.item == 4) {
+//        [self navigateToVoiceVideo];
+//    }
     else{
-        
     }
 }
 
@@ -74,10 +77,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
--(void)navigateToVoiceVideo{
-    
-}
-
 -(void)navigateToAddressBook{
     
     AddressDirectoryViewController *vc = [[AddressDirectoryViewController alloc]initWithNibName:@"AddressDirectoryViewController" bundle:nil];
@@ -90,6 +89,12 @@
     vc.cpaas = self.cpaas;
     [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+-(void) navigateToVoiceVideo {
+    VoiceVideoControllerViewController *vc = [[VoiceVideoControllerViewController alloc]initWithNibName:@"VoiceVideoControllerViewController" bundle:nil];
+    vc.cpaas = self.cpaas;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma Layout Flow
