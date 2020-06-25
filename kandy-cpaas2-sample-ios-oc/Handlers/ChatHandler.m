@@ -1,10 +1,3 @@
-//
-//  ChatHandler.m
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 12/6/19.
-//  Copyright © 2019 hcl. All rights reserved.
-//
 
 #import "ChatHandler.h"
 

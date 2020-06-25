@@ -42,44 +42,5 @@
     NSLog(@"Call Status changed to :%ld", (long)callState.type);
 }
 
-- (void)consultativeTransfer:(id<CPCallDelegate> _Nonnull)call {
- 
-}
-
-- (void)endCall {
-    
-}
-
-- (void)holdCall {
-    
-}
-
-- (void)mute {
-    
-}
-
-- (void)setCaptureDevice:(AVCaptureDevicePosition)position withVideoResolution:(nonnull NSString *)videoResolution completionHandler:(void (^ _Nullable)(CPError * _Nullable))handler {
-    
-}
-
-- (void)transferCall:(CPUriAddress * _Nonnull)newAddress {
-    
-}
-
-- (void)unHoldCall {
-    
-}
-
-- (void)unMute {
-    
-}
-
-- (void)videoStart {
-    
-}
-
-- (void)videoStop {
-    
-}
 
 @end

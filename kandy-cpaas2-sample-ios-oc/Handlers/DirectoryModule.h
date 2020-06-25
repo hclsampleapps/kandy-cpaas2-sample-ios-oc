@@ -1,10 +1,4 @@
-//
-//  DirectoryModule.h
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 11/11/19.
-//  Copyright © 2019 hcl. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import "DirectoryBO.h"

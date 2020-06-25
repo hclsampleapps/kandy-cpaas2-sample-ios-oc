@@ -1,10 +1,3 @@
-//
-//  ProjectLoginViewController.h
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 10/17/19.
-//  Copyright © 2019 hcl. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
@@ -12,7 +5,6 @@
 NS_ASSUME_NONNULL_BEGIN
 @import CPUtilities;
 @import CPaaSSDK;
-@import CPAuthenticationService;
 
 @interface ProjectLoginViewController : BaseViewController
 

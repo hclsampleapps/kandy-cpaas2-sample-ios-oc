@@ -1,10 +1,3 @@
-//
-//  ProjectLoginViewController.m
-//  Kandy_Cpaas_ObjectiveC
-//
-//  Created by Kunal Nagpal on 10/17/19.
-//  Copyright © 2019 hcl. All rights reserved.
-//
 
 #import "ProjectLoginViewController.h"
 #import "Call_Controller.h"

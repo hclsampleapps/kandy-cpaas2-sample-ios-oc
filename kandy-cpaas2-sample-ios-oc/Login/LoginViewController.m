@@ -122,6 +122,14 @@
     CPConfig *configuration = [CPConfig sharedInstance];
     configuration.restServerUrl = @"oauth-cpaas.att.com";
     configuration.useSecureConnection = YES;
+    CPICEServers *iceServers = [[CPICEServers alloc] init];
+    [iceServers addICEServer:@"turns:turn-ucc-1.genband.com:443?transport=tcp"];
+    [iceServers addICEServer:@"turns:turn-ucc-2.genband.com:443?transport=tcp"];
+    [iceServers addICEServer:@"stun:turn-ucc-1.genband.com:3478?transport=udp"];
+    [iceServers addICEServer:@"stun:turn-ucc-2.genband.com:3478?transport=udp"];
+    [configuration setICEServers:iceServers];
+    [configuration.logManager setLogLevel:TRACE_WEBRTC];
+    [configuration.logManager setDelegate:self];
     self.activityIndicatorView.hidden = true;
 }
 
@@ -155,6 +163,10 @@
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:vc];
     vc.cpaas = self.CPaaS;
     [[UIApplication sharedApplication] delegate].window.rootViewController = navigationController;
+}
+
+- (void)log:(CPLogLevel)logLevel withLogContext:(nonnull NSString *)logContext withMethodName:(nullable SEL)methodName withMessage:(nonnull NSString *)logMessage {
+    NSLog(@"LogLevel :: %ld - WithMessage %@", (long)logLevel,logMessage);
 }
 
 @end

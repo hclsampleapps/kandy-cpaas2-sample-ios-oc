@@ -1,7 +1,6 @@
 
 #import "SMS_Controller.h"
 @import CPaaSSDK;
-@import CPMessagingService;
 
 @interface SMS_Controller ()
 
