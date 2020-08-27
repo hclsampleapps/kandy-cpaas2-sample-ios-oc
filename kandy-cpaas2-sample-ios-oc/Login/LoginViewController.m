@@ -17,10 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _clienId.text = @"abc.mv";
-    _username.text = @"abc.dd.com";
-    _password.text = @"abc@123";
-    _baseUrl_Field.text = @"oauth-cpaas.att.com";
+    _clienId.text = @"PUB-project.name";
+    _username.text = @"user2@domain.com";
+    _password.text = @"Test@123";
+    _baseUrl_Field.text = @"baseurl.domain.com";
     // Do any additional setup after loading the view, typically from a nib.
     [self setConfiguration];
     [self changeViewLayout];

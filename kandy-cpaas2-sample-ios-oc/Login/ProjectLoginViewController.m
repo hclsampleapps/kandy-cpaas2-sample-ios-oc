@@ -15,9 +15,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _privateprojectkey_Field.text = @"abcde123-12a1-1a23-1234-123a12345a1a";
-    _baseUrl_Field.text = @"oauth-cpaas.att.com";
-    _privateprojectsecret_Field.text =  @"123abcde-a123-1234-abcd-ab12345c67d8";
+    _privateprojectkey_Field.text = @"PRIV-sample";
+    _baseUrl_Field.text = @"baseurl.domain.com";
+    _privateprojectsecret_Field.text =  @"b013f26f-329a-4156-a01c-38263505f965";
     [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"Client Credentials"];
     [self changeViewLayout];
     
