@@ -3,34 +3,35 @@
 
 @interface VoiceVideoControllerViewController ()
 
+
 @end
 
 @implementation VoiceVideoControllerViewController
 
-id<CPIncomingCallDelegate>currentCall;
+id<CPOutgoingCallDelegate> currentOutgoingcall;
+id<CPIncomingCallDelegate> currentIncomingCall;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"Dashboard"];
+    [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"Call"];
     [self initServices];
-    [self.userIdField setText:@"nesonukuv1@nesonukuv.34mv.att.com"];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void) initServices {
     [self.cpaas.callService setCallApplicationDelegate:self];
-   // [self placeOutGoingCall];
 }
 
 //Outgoing Call
 -(void) placeOutGoingCall {
-    CPUriAddress *term = [[CPUriAddress alloc] initWithUsername:@"nesonukuv1" withDomain:@"nesonukuv.34mv.att.com"];
+    CPUriAddress *term = [[CPUriAddress alloc] initWithUsername:@"user" withDomain:@"domain"];
     CPCallService *service = self.cpaas.callService;
     [service createOutGoingCall:self andTerminator:term completion:^(id<CPOutgoingCallDelegate> call, CPError * error) {
         if (error) {
             NSLog(@"Call Couldn't be created - Error: %@", error.localizedDescription);
             return;
         } else {
+            currentOutgoingcall = call;
             call.localVideoView = self.localVideoViewHandler;
             call.remoteVideoView = self.remoteVideoViewHandler;
             [call establishCall:YES];
@@ -38,17 +39,30 @@ id<CPIncomingCallDelegate>currentCall;
     }];
 }
 
+- (id<CPOutgoingCallDelegate>)getCurrentOutGoingCall {
+    return currentOutgoingcall;
+}
+
+
+- (id<CPIncomingCallDelegate>)getCurrentIncomingCall {
+    return currentIncomingCall;
+}
+
 - (IBAction)startCall:(id)sender{
     [self placeOutGoingCall];
 }
 
 - (IBAction)endCall:(id)sender{
-    [self.getCurrentCall endCall];
-    [self.navigationController popViewControllerAnimated:true];
-}
-
-- (id<CPIncomingCallDelegate>)getCurrentCall {
-    return currentCall;
+    if(currentOutgoingcall != nil) {
+        [self.getCurrentOutGoingCall endCall];
+        currentOutgoingcall  = nil;
+    }
+    
+    if(currentIncomingCall != nil) {
+        [self.getCurrentIncomingCall endCall];
+        currentIncomingCall  = nil;
+    }
+    
 }
 
 - (void)acceptCallFailed:(nonnull id<CPIncomingCallDelegate>)call withError:(nonnull CPError *)error{
@@ -109,6 +123,7 @@ id<CPIncomingCallDelegate>currentCall;
 
 - (void)incomingCall:(nonnull id<CPIncomingCallDelegate>)call {
     [call acceptCall:true];
+    currentIncomingCall = call;
     call.localVideoView = self.localVideoViewHandler;
     call.remoteVideoView = self.remoteVideoViewHandler;
 }

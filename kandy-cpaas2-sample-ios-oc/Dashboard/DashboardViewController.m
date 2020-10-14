@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    mainContents = [[NSArray alloc]initWithObjects : @"SMS", @"Chat", @"Addressbook",@"Presence", nil];
+    mainContents = [[NSArray alloc]initWithObjects : @"SMS", @"Chat", @"Addressbook",@"Presence",@"Call", nil];
     [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"DASHBOARD"];
     self.navigationItem.hidesBackButton = YES;
     [self.collectionVw registerNib:[UINib nibWithNibName:@"DashboardTypeCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"DashboardTypeCustomCollectionCell"];
@@ -57,9 +57,9 @@
     else if (indexPath.item == 3) {
         [self navigateToPresence];
     }
-//    else if (indexPath.item == 4) {
-//        [self navigateToVoiceVideo];
-//    }
+    else if (indexPath.item == 4) {
+        [self navigateToVoiceVideo];
+    }
     else{
     }
 }
