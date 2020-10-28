@@ -31,7 +31,17 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleKeybaordNotification:) name:UIKeyboardWillHideNotification object:nil];
     _inputTextView.layer.cornerRadius = 4.0;
     _inputTextView.layer.borderColor = [UIColor grayColor].CGColor;
-    _inputTextView.layer.borderWidth = 0.8;    
+    _inputTextView.layer.borderWidth = 0.8;
+    [self addNavBarButton];
+}
+
+-(void) addNavBarButton {
+     UIBarButtonItem *historyButton = [[UIBarButtonItem alloc]init];
+     historyButton.action = @selector(getHistory);
+     historyButton.title = @"Chat History";
+     historyButton.target = self;
+     historyButton.tintColor = UIColor.whiteColor;
+     self.navigationItem.rightBarButtonItem = historyButton;
 }
 
 
@@ -90,6 +100,45 @@
     
 }
 
+-(void) getHistory {
+    if (self.destinationNumber.text && self.destinationNumber.text.length > 0) {
+    [self.cpaas.chatService fetchConversationWithParticipant:self.destinationNumber.text completion:^(CPError * error, FetchResult * results) {
+                if(error == nil) {
+                    for (CPConversation* conversation in results.result) {
+                        NSLog(@"conversation %@",conversation.lastText);
+                        [conversation fetchMessagesWithCompletion:^(CPError * error, FetchResult * results) {
+                            if(error == nil) {
+                                for (CPMessage* message in results.result) {
+                                    if([message.sender isEqualToString:self.destinationNumber.text]) {
+                                        LynnBubbleData *bubbleData = [[LynnBubbleData alloc] initWithUserData:self->userSomeone dataOwner:BubbleDataTypeSomeone message:message.text messageDate:[NSDate date] attachedImage:nil];
+                                        [self->arrChatTest addObject:bubbleData];
+                                        [self->_tbBubbleDemo reloadData];
+                                    } else {
+                                        LynnBubbleData *bubbleData = [[LynnBubbleData alloc] initWithUserData:self->userMe dataOwner:BubbleDataTypeMe message:message.text messageDate:[NSDate date] attachedImage:nil];
+                                        [self->arrChatTest addObject:bubbleData];
+                                        [self->_tbBubbleDemo reloadData];
+                                    }
+                                }
+                                  } else {
+                                      NSLog(@"Couldn't fetch Message for Conversation: %@", error.localizedDescription);
+                                  }
+                        }];
+                    }
+                } else {
+                    NSLog(@"Couldn't fetch conversations: %@", error.localizedDescription);
+                }
+    }];
+    } else {
+              UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Please enter destination address to fetch the history." preferredStyle:UIAlertControllerStyleAlert];
+               UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   [alert dismissViewControllerAnimated:YES
+                                             completion:nil];
+               }];
+               [alert addAction:ok];
+               [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+ 
 - (void)sendMessagewithSuccess:(BOOL)isSuccess
 {
     if (isSuccess) {
