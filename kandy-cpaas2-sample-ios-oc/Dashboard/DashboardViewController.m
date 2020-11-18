@@ -6,6 +6,8 @@
 #import "SMSViewController.h"
 #import "PresenceViewController.h"
 #import "VoiceVideoControllerViewController.h"
+#import "GroupChatListViewController.h"
+
 
 @interface DashboardViewController () <UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
@@ -18,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    mainContents = [[NSArray alloc]initWithObjects : @"SMS", @"Chat", @"Addressbook",@"Presence",@"Call", nil];
+    mainContents = [[NSArray alloc]initWithObjects : @"SMS", @"Chat", @"Addressbook",@"Presence",@"Call",@"Group Chat", nil];
     [self setNavigationBarColorForViewController:self ofType:0 withTitleString:@"DASHBOARD"];
     self.navigationItem.hidesBackButton = YES;
     [self.collectionVw registerNib:[UINib nibWithNibName:@"DashboardTypeCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"DashboardTypeCustomCollectionCell"];
@@ -60,6 +62,9 @@
     else if (indexPath.item == 4) {
         [self navigateToVoiceVideo];
     }
+    else if (indexPath.item == 5) {
+        [self navigateToGroupChat];
+    }
     else{
     }
 }
@@ -93,6 +98,12 @@
 
 -(void) navigateToVoiceVideo {
     VoiceVideoControllerViewController *vc = [[VoiceVideoControllerViewController alloc]initWithNibName:@"VoiceVideoControllerViewController" bundle:nil];
+    vc.cpaas = self.cpaas;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void) navigateToGroupChat {
+    GroupChatListViewController *vc = [[GroupChatListViewController alloc]initWithNibName:@"GroupChatListViewController" bundle:nil];
     vc.cpaas = self.cpaas;
     [self.navigationController pushViewController:vc animated:YES];
 }
