@@ -121,7 +121,6 @@
 -(void) setConfiguration {
     CPConfig *configuration = [CPConfig sharedInstance];
     configuration.restServerUrl = @"oauth-cpaas.att.com";
-    configuration.useSecureConnection = YES;
     CPICEServers *iceServers = [[CPICEServers alloc] init];
     [iceServers addICEServer:@"turns:turn-ucc-1.genband.com:443?transport=tcp"];
     [iceServers addICEServer:@"turns:turn-ucc-2.genband.com:443?transport=tcp"];
