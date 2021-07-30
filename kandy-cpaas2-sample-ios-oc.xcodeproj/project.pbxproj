@@ -784,7 +784,7 @@
 				);
 				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/\"";
 				INFOPLIST_FILE = "kandy-cpaas2-sample-ios-oc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -818,7 +818,7 @@
 				);
 				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/\"";
 				INFOPLIST_FILE = "kandy-cpaas2-sample-ios-oc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
