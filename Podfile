@@ -4,7 +4,7 @@
 target 'kandy-cpaas2-sample-ios-oc' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-	pod 'KandyCPaaSMobileSDK' , '2.20.0'
+	pod 'KandyCPaaSMobileSDK' , '2.23.0'
 
   # Pods for kandy-cpaas2-sample-ios-oc
 
